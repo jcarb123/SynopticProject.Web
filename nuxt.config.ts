@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'ThAmCo Web', 
+      title: 'ThAmCo', 
       meta: [
         {
           name: 'description',
