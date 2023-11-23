@@ -2,7 +2,6 @@
   <div
     class="card flex flex-col justify-between text-center bg-white shadow-lg rounded-lg h-96"
     :class="{
-      'opacity-50': !product.inStock,
       'transition duration-300 transform hover:scale-105': product.inStock,
     }"
   >
