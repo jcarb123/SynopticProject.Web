@@ -26,7 +26,7 @@ const products = ref([]);
 
 const fetchProducts = async (searchTerm = "") => {
   let url =
-    "https://thamco-product-catalogue-api-test.azurewebsites.net/api/v1.0/Products";
+    "https://thamco-product-catalogue-api-live.azurewebsites.net/api/v1.0/Products";
   if (searchTerm) {
     url += `/search?SearchTerm=${searchTerm}`;
   }
