@@ -1,7 +1,7 @@
 <template>
   <div
-    class="p-3 rounded-md bg-white shadow-md h-full flex flex-col justify-between text-center bg-white shadow-lg rounded-lg h-[12rem] overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out"
-    :class="{ 'transform hover:scale-105': product.inStock }"
+    class="p-3 rounded-md bg-white h-full flex flex-col justify-between text-center bg-white shadow-lg rounded-lg h-[12rem] overflow-hidden"
+    :class="{ 'transform hover:scale-105 duration-450': product.inStock }"
   >
     <div :class="product.inStock ? 'bg-green-500' : 'bg-red-500'">
       <p class="text-white text-xl font-bold py-2">
