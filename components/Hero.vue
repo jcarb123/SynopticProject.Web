@@ -91,8 +91,7 @@ const login = () => {
 };
 
 const logout = () => {
-  navigateTo("/");
-  auth0?.logout();
+  auth0?.logout;
 };
 
 const toggleProfileModal = () => {
