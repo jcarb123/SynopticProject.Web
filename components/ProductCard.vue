@@ -13,7 +13,7 @@
     </div>
     <div class="flex-1 p-4 flex flex-col justify-between">
       <h3 class="font-bold text-gray-800 text-3xl mb-2">{{ product.name }}</h3>
-      <p class="text-3xl">£{{ product.price }}</p>
+      <p class="text-3xl">£{{ product.price.toFixed(2) }}</p>
     </div>
   </div>
 </template>

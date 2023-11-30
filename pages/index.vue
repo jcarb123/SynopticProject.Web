@@ -11,10 +11,11 @@
     </div>
     <div v-else class="flex flex-col justify-center items-center h-[34rem]">
       <div
-        class="inline-block h-[12rem] w-[12rem] animate-spin rounded-full border-8 border-solid border-cyan-600 border-t-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        class="inline-block h-[12rem] w-[12rem] animate-spin rounded-full border-8 border-solid border-cyan-600 align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        style="border-color: #00558f transparent #00558f #00558f"
         role="status"
-      ></div>
-      <p class="text-cyan-600 text-3xl font-semibold mt-8">
+      />
+      <p class="text-3xl font-semibold mt-8" style="color: #00558f">
         Loading products...
       </p>
     </div>
