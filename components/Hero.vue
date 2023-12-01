@@ -29,7 +29,7 @@
       <button
         v-if="!isAuthenticated"
         @click="login"
-        class="px-4 py-2 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
+        class="px-6 py-3 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
         style="color: #00558f"
       >
         Log In

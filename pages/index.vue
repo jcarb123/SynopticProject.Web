@@ -3,7 +3,7 @@
     <Hero @search="handleSearch" />
     <div
       v-if="products && products.products && products.products.length > 0"
-      class="grid grid-cols-3 gap-10 px-7 mb-16"
+      class="grid grid-cols-5 gap-10 px-7 mb-16"
     >
       <div v-for="product in products.products" :key="product.id">
         <ProductCard :product="product" />

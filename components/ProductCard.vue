@@ -1,19 +1,13 @@
 <template>
   <div
-    class="p-3 rounded-md bg-white h-full flex flex-col justify-between text-center bg-white shadow-lg rounded-lg h-[12rem] overflow-hidden"
-    :class="{
-      'transform hover:scale-105 duration-450': product.inStock,
-      'opacity-40': !product.inStock,
-    }"
+    class="p-3 rounded-xl bg-white h-full flex flex-col justify-between text-center h-[22rem] overflow-hidden transform hover:scale-105 duration-450 border-4"
+    style="border-color: #FDB71B"
   >
-    <div :class="product.inStock ? 'bg-green-500' : 'bg-red-500'">
-      <p class="text-white text-xl font-bold py-2">
-        {{ product.inStock ? "In Stock" : "Out of Stock" }}
-      </p>
-    </div>
-    <div class="flex-1 p-4 flex flex-col justify-between">
-      <h3 class="font-bold text-gray-800 text-3xl mb-2">{{ product.name }}</h3>
-      <p class="text-3xl">£{{ product.price.toFixed(2) }}</p>
+    <div class="flex-1 p-4 flex flex-col justify-between hover:text-black" style="color: #00558F">
+      <h3 class="font-bold text-3xl mb-2" style="color: #00558F">{{ product.name }}</h3>
+      <div class="flex justify-center items-center mb-2" style="height: 70%; max-height: 200px;">
+        <img :src="product.imageUrl" :alt="product.name" class="object-contain h-full">
+      </div>
     </div>
   </div>
 </template>
