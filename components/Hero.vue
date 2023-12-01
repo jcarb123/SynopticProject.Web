@@ -51,7 +51,7 @@
           v-model="searchTerm"
           type="search"
           class="px-4 py-2 w-80 h-16 text-black text-2xl"
-          placeholder="Search for a product..."
+          placeholder="Search ThAmCo"
         />
       </div>
     </div>
@@ -92,7 +92,7 @@ const login = () => {
 
 const logout = () => {
   auth0?.logout({
-    returnTo: window.location.origin,
+    logoutParams: { returnTo: window.location.origin },
   });
 };
 
