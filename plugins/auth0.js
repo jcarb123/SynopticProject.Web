@@ -5,7 +5,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     domain: "dev-1mgxvq17vh1314n5.us.auth0.com",
     clientId: "sTaHxz4u8vyy6ZtCpns4L41WJwH5f4AE",
     authorizationParams: {
-      redirect_uri: "https://zealous-mud-0b8b86403.4.azurestaticapps.net/",
+      redirect_uri: "https://zealous-mud-0b8b86403.4.azurestaticapps.net",
     },
   });
 

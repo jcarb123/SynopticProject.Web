@@ -91,8 +91,9 @@ const login = () => {
 };
 
 const logout = () => {
-  auth0?.logout();
-  navigateTo("https://zealous-mud-0b8b86403.4.azurestaticapps.net");
+  auth0?.logout({
+    returnTo: window.location.origin,
+  });
 };
 
 const toggleProfileModal = () => {
