@@ -92,7 +92,7 @@ const login = () => {
 
 const logout = () => {
   auth0?.logout({
-    returnTo: 'https://zealous-mud-0b8b86403.4.azurestaticapps.net/'
+    returnTo: 'https://zealous-mud-0b8b86403.4.azurestaticapps.net'
   });
 };
 
