@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-white text-center py-20 mb-10 flex flex-col justify-center h-96 rounded-b-3xl relative"
+    class="text-white text-center py-20 mb-10 flex flex-col justify-center h-96 rounded-b-[6rem]"
     style="background-color: #00558f"
   >
     <div class="absolute top-5 right-5 flex items-center">
@@ -29,7 +29,7 @@
       <button
         v-if="!isAuthenticated"
         @click="login"
-        class="px-6 py-3 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
+        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450"
         style="color: #00558f"
       >
         Log In
@@ -37,21 +37,23 @@
       <button
         v-else
         @click="logout"
-        class="px-4 py-2 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
+        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450"
         style="color: #00558f"
       >
         Log Out
       </button>
     </div>
 
-    <h1 class="text-8xl font-bold mb-4">Products</h1>
+    <h1 class="text-8xl font-bold mb-6">Products</h1>
     <div class="flex justify-center mt-6">
-      <div class="flex border-2 border-white rounded">
+      <div class="flex border-2 border-white rounded items-center">
+        <span class="px-2">
+          <i class="fa fa-search text-2xl"></i>
+        </span>
         <input
           v-model="searchTerm"
           type="search"
-          class="px-4 py-2 w-80 h-16 text-black text-2xl"
-          placeholder="Search ThAmCo"
+          class="py-2 px-2 w-[40rem] h-14 text-black text-xl"
         />
       </div>
     </div>

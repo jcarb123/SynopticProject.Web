@@ -1,11 +1,14 @@
 import { createAuth0 } from "@auth0/auth0-vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
+  const config = useRuntimeConfig();
+
   const auth0 = createAuth0({
-    domain: "dev-1mgxvq17vh1314n5.us.auth0.com",
-    clientId: "sTaHxz4u8vyy6ZtCpns4L41WJwH5f4AE",
+    domain: config.public.domain,
+    clientId: config.public.clientId,
     authorizationParams: {
-      redirect_uri: "https://zealous-mud-0b8b86403.4.azurestaticapps.net",
+      redirect_uri: config.public.redirectUrl,
+      audience: config.public.audience,
     },
   });
 

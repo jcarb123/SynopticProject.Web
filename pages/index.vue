@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Hero @search="handleSearch" />
+    <Hero @search="loadProducts" />
     <div
       v-if="products && products.products && products.products.length > 0"
-      class="grid grid-cols-5 gap-10 px-7 mb-16"
+      class="grid grid-cols-4 gap-10 px-7 mb-16"
     >
       <div v-for="product in products.products" :key="product.id">
         <ProductCard :product="product" />
@@ -23,34 +23,14 @@
 </template>
 
 <script setup>
+import { fetchProducts } from "@/services/productService";
+const config = useRuntimeConfig();
+
 const products = ref([]);
 
-const fetchProducts = async (searchTerm = "") => {
-  let url =
-    "https://thamco-product-catalogue-api-live.azurewebsites.net/api/v1.0/Products";
-  if (searchTerm) {
-    url += `/search?SearchTerm=${searchTerm}`;
-  }
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      console.error("Fetch error:", response.statusText);
-      return;
-    }
-    const data = await response.json();
-    products.value = data;
-  } catch (err) {
-    console.error("Error fetching products:", err);
-  }
+const loadProducts = async (searchTerm = "") => {
+  products.value = await fetchProducts(config.public.baseUrl, searchTerm);
 };
 
-const handleSearch = (searchTerm) => {
-  if (searchTerm.trim() === "") {
-    fetchProducts();
-  } else {
-    fetchProducts(searchTerm);
-  }
-};
-
-onMounted(fetchProducts);
+onMounted(loadProducts);
 </script>

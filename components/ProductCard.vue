@@ -1,13 +1,25 @@
 <template>
   <div
-    class="p-3 rounded-xl bg-white h-full flex flex-col justify-between text-center h-[22rem] overflow-hidden transform hover:scale-105 duration-450 border-4"
-    style="border-color: #FDB71B"
+    class="rounded-xl bg-white flex flex-col justify-between text-center overflow-hidden transform hover:scale-105 duration-450 border-4"
+    style="height: 24rem; border-color: #fdb71b"
   >
-    <div class="flex-1 p-4 flex flex-col justify-between hover:text-black" style="color: #00558F">
-      <h3 class="font-bold text-3xl mb-2" style="color: #00558F">{{ product.name }}</h3>
-      <div class="flex justify-center items-center mb-2" style="height: 70%; max-height: 200px;">
-        <img :src="product.imageUrl" :alt="product.name" class="object-contain h-full">
+    <div
+      class="flex-1 p-5 flex flex-col justify-between hover:text-black"
+      style="color: #00558f"
+    >
+      <div
+        class="flex justify-center items-center"
+        style="height: 180px"
+      >
+        <img
+          :src="product.imageUrl"
+          :alt="product.name"
+          class="object-contain h-full w-full"
+        />
       </div>
+      <h3 class="font-bold text-3xl mb-1" style="color: #00558f; max-height: 8rem; overflow: hidden;">
+        {{ product.name }}
+      </h3>
     </div>
   </div>
 </template>
