@@ -6,7 +6,7 @@
       <button
         v-if="isAuthenticated"
         @click="toggleProfileModal"
-        class="px-4 py-2 mr-4 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
+        class="px-4 py-4 mr-4 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450 text-sky-800"
       >
         <i class="fas fa-user"></i>
       </button>
@@ -18,7 +18,7 @@
           <p><strong>Email Address</strong> {{ user.value.name }}</p>
           <button
             @click="toggleProfileModal"
-            class="mt-4 py-4 bg-red-500 text-sky-800 rounded hover:bg-red-600 mx-16"
+            class="mt-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 mx-16"
           >
             Close
           </button>
