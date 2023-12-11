@@ -1,14 +1,12 @@
 <template>
   <div
-    class="text-white text-center py-20 mb-10 flex flex-col justify-center h-96 rounded-b-[6rem]"
-    style="background-color: #00558f"
+    class="text-white text-center py-20 mb-10 flex flex-col justify-center h-96 rounded-b-[6rem] bg-sky-800"
   >
     <div class="absolute top-5 right-5 flex items-center">
       <button
         v-if="isAuthenticated"
         @click="toggleProfileModal"
         class="px-4 py-2 mr-4 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450"
-        style="color: #00558f"
       >
         <i class="fas fa-user"></i>
       </button>
@@ -29,16 +27,14 @@
       <button
         v-if="!isAuthenticated"
         @click="login"
-        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450"
-        style="color: #00558f"
+        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450 text-sky-800"
       >
         Log In
       </button>
       <button
         v-else
         @click="logout"
-        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450"
-        style="color: #00558f"
+        class="px-8 py-4 rounded font-bold text-2xl bg-white transform hover:scale-105 duration-450 text-sky-800"
       >
         Log Out
       </button>

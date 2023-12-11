@@ -4,11 +4,11 @@ export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
 
   const auth0 = createAuth0({
-    domain: config.public.domain,
-    clientId: config.public.clientId,
+    domain: "dev-1mgxvq17vh1314n5.us.auth0.com",
+    clientId: "sTaHxz4u8vyy6ZtCpns4L41WJwH5f4AE",
     authorizationParams: {
-      redirect_uri: config.public.redirectUrl,
-      audience: config.public.audience,
+      redirect_uri: "https://zealous-mud-0b8b86403.4.azurestaticapps.net",
+      audience: "https://thamco-orders.com",
     },
   });
 
