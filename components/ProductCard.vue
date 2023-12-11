@@ -19,7 +19,7 @@
       £{{ product.price.toFixed(2) }}
     </h4>
     <button
-      v-if="!isAuthenticated"
+      v-if="isAuthenticated"
       @click="addToCart"
       class="text-black font-bold text-lg bg-amber-400 px-16 py-2 rounded-md hover:bg-yellow-400"
     >

@@ -18,7 +18,7 @@
           <p><strong>Email Address</strong> {{ user.value.name }}</p>
           <button
             @click="toggleProfileModal"
-            class="mt-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 mx-16"
+            class="mt-4 py-4 bg-red-500 text-sky-800 rounded hover:bg-red-600 mx-16"
           >
             Close
           </button>
