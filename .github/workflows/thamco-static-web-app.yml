@@ -14,7 +14,7 @@ env:
 
 jobs:
   Deploy-Test:
-    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     environment: Test
     steps:
