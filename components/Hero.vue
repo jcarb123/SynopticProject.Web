@@ -49,6 +49,7 @@
         <input
           v-model="searchTerm"
           type="search"
+          placeholder="Search our products"
           class="py-2 px-2 w-[40rem] h-14 text-black text-xl"
         />
       </div>
