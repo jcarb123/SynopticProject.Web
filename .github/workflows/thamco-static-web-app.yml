@@ -9,8 +9,8 @@ on:
 
 env:
   APP_LOCATION: "/" # App source code path
-  API_LOCATION: "" # Api source code path - optional
-  OUTPUT_LOCATION: "" # Built app content directory - optional
+  API_LOCATION: ".output/server" # Api source code path - optional
+  OUTPUT_LOCATION: ".output/public" # Built app content directory - optional
 
 jobs:
   Deploy-Test:
