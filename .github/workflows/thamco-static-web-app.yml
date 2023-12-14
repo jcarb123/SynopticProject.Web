@@ -33,6 +33,7 @@ jobs:
   Deploy-Production:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    needs: Deploy-Test
     environment: Production
     name: Deploy to Production Environment
     steps:
