@@ -29,6 +29,15 @@ jobs:
           api_location: ${{ env.API_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
 
+      - name: Print name
+        run: echo "AUTH0_AUDIENCE variable is $AUTH0_AUDIENCE"
+        env:
+          AUTH0_AUDIENCE: ${{ env.AUTH0_AUDIENCE }}
+
+
+      - name: Dump env variables
+        run: env
+
   Deploy-Production:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -45,3 +54,12 @@ jobs:
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
+
+      - name: Print name
+        run: echo "AUTH0_AUDIENCE variable is $AUTH0_AUDIENCE"
+        env:
+          AUTH0_AUDIENCE: ${{ env.AUTH0_AUDIENCE }}
+
+
+      - name: Dump env variables
+        run: env
