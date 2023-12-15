@@ -14,4 +14,5 @@ export async function fetchProducts(searchTerm = "", config) {
     console.error("Error fetching products:", err);
     return [];
   }
+  console.dir(config)
 }
