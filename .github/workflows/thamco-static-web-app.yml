@@ -28,15 +28,12 @@ jobs:
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
-
-      - name: Print name
-        run: echo "AUTH0_AUDIENCE variable is $AUTH0_AUDIENCE"
         env:
           AUTH0_AUDIENCE: ${{ vars.AUTH0_AUDIENCE }}
-
-
-      - name: Dump env variables
-        run: env
+          AUTH0_CLIENT_ID: ${{ vars.AUTH0_CLIENT_ID }}
+          AUTH0_DOMAIN: ${{ vars.AUTH0_DOMAIN }}
+          AUTH0_REDIRECT_URI: ${{ vars.AUTH0_REDIRECT_URI }}
+          PRODUCTS_BASE_URI: ${{ vars.PRODUCTS_BASE_URI }}
 
   Deploy-Production:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -54,12 +51,9 @@ jobs:
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
-
-      - name: Print name
-        run: echo "AUTH0_AUDIENCE variable is $AUTH0_AUDIENCE"
         env:
           AUTH0_AUDIENCE: ${{ vars.AUTH0_AUDIENCE }}
-
-
-      - name: Dump env variables
-        run: env
+          AUTH0_CLIENT_ID: ${{ vars.AUTH0_CLIENT_ID }}
+          AUTH0_DOMAIN: ${{ vars.AUTH0_DOMAIN }}
+          AUTH0_REDIRECT_URI: ${{ vars.AUTH0_REDIRECT_URI }}
+          PRODUCTS_BASE_URI: ${{ vars.PRODUCTS_BASE_URI }}
