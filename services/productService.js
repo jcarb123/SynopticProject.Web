@@ -12,7 +12,7 @@ export async function fetchProducts(searchTerm = "", config) {
     return await response.json();
   } catch (err) {
     console.error("Error fetching products:", err);
+    console.dir(config);
     return [];
   }
-  console.dir(config)
 }
