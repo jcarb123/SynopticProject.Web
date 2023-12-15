@@ -1,6 +1,7 @@
 export async function fetchProducts(searchTerm = "") {
-  let url =
-    "https://thamco-product-catalogue-api-live.azurewebsites.net/api/v1.0/Products";
+  const config = useRuntimeConfig().public;
+
+  let url = config.PRODUCTS_BASE_URI;
   if (searchTerm) {
     url += `/search?SearchTerm=${searchTerm}`;
   }

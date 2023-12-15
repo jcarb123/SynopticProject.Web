@@ -1,14 +1,14 @@
 import { createAuth0 } from "@auth0/auth0-vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const config = useRuntimeConfig();
+  const config = useRuntimeConfig().public;
 
   const auth0 = createAuth0({
-    domain: "dev-1mgxvq17vh1314n5.us.auth0.com",
-    clientId: "sTaHxz4u8vyy6ZtCpns4L41WJwH5f4AE",
+    domain: config.AUTH0_DOMAIN,
+    clientId: config.AUTH0_CLIENT_ID,
     authorizationParams: {
-      redirect_uri: "https://purple-moss-06c10f903.4.azurestaticapps.net",
-      audience: "https://thamco-orders.com",
+      redirect_uri: config.AUTH0_REDIRECT_URI,
+      audience: config.AUTH0_AUDIENCE,
     },
   });
 
