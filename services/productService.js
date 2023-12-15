@@ -1,6 +1,4 @@
-export async function fetchProducts(searchTerm = "") {
-  const config = useRuntimeConfig().public;
-
+export async function fetchProducts(searchTerm = "", config) {
   let url = config.PRODUCTS_BASE_URI;
   if (searchTerm) {
     url += `/search?SearchTerm=${searchTerm}`;
