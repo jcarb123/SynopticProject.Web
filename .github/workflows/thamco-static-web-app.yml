@@ -11,6 +11,11 @@ env:
   APP_LOCATION: "/" # App source code path
   API_LOCATION: ".output/server" # Api source code path - optional
   OUTPUT_LOCATION: ".output/public" # Built app content directory - optional
+  AUTH0_AUDIENCE: ${{ env.AUTH0_AUDIENCE }}
+  AUTH0_CLIENT_ID: ${{ env.AUTH0_CLIENT_ID }}
+  AUTH0_DOMAIN: ${{ env.AUTH0_DOMAIN }}
+  AUTH0_REDIRECT_URI: ${{ env.AUTH0_REDIRECT_URI }}
+  PRODUCTS_BASE_URI: ${{ env.PRODUCTS_BASE_URI }}
 
 jobs:
   Deploy-Test:
