@@ -26,6 +26,7 @@
 import { fetchProducts } from "@/services/productService";
 import { useAuth0 } from "@auth0/auth0-vue";
 
+const config = useRuntimeConfig().public;
 const products = ref([]);
 
 const auth0 = process.client ? useAuth0() : undefined;
@@ -35,7 +36,7 @@ const isAuthenticated = computed(() => {
 });
 
 const loadProducts = async (searchTerm = "") => {
-  products.value = await fetchProducts(searchTerm);
+  products.value = await fetchProducts(searchTerm, config);
 };
 
 onMounted(loadProducts);
