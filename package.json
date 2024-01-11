@@ -7,17 +7,21 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@vue/test-utils": "^2.4.3",
+    "jsdom": "^23.2.0",
     "nuxt": "^3.8.0",
     "vue": "^3.3.6",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.3.2",
-    "@fortawesome/fontawesome-free": "^6.5.0"
+    "@fortawesome/fontawesome-free": "^6.5.0",
+    "vitest": "^1.1.3"
   }
 }
