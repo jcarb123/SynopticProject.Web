@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import { useAuth0 } from "@auth0/auth0-vue";
 import "@fortawesome/fontawesome-free/css/all.css";
 
