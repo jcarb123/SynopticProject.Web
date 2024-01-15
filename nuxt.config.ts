@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       AUTH0_REDIRECT_URI: process.env.AUTH0_REDIRECT_URI,
       AUTH0_AUDIENCE: process.env.AUTH0_AUDIENCE,
       PRODUCTS_BASE_URI: process.env.PRODUCTS_BASE_URI,
+      ORDERS_BASE_URI: process.env.ORDERS_BASE_URI
     },
   },
 });
