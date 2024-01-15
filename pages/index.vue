@@ -19,7 +19,7 @@
       class="grid grid-cols-4 mx-12 my-12 gap-3 mb-15"
     >
       <div v-for="product in products.products" :key="product.id">
-        <ProductCard :product="product" :isAuthenticated="isAuthenticated" />
+        <ProductCard :product="product" />
       </div>
     </div>
     <div
@@ -37,19 +37,12 @@
 
 <script setup>
 import { fetchProducts } from "../services/productService";
-import { useAuth0 } from "@auth0/auth0-vue";
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref } from "vue";
 
 const config = useRuntimeConfig().public;
 const products = ref([]);
 const isLoading = ref(false);
 const productsLoaded = ref(false);
-
-const auth0 = process.client ? useAuth0() : undefined;
-
-const isAuthenticated = computed(() => {
-  return auth0?.isAuthenticated.value;
-});
 
 const loadProducts = async (searchTerm = "") => {
   isLoading.value = true;
