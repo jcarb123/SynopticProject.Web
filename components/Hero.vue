@@ -6,22 +6,16 @@
       <button
         v-if="isAuthenticated"
         @click="toggleProfileModal"
-        class="px-4 py-4 mr-4 rounded font-bold text-xl bg-white transform hover:scale-105 duration-450 text-sky-800"
+        class="px-4 py-4 mr-4 rounded font-bold text-xl bg-white transform scale-105 duration-450 text-sky-800"
       >
         <i class="fas fa-user"></i>
       </button>
       <div
         v-if="isProfileModalVisible && isAuthenticated"
-        class="absolute top-16 right-5 w-64 bg-white shadow-lg rounded p-4 z-50 text-black"
+        class="absolute top-20 right-16 w-64 bg-white shadow-lg rounded-xl p-4 z-50 text-black"
       >
         <div class="flex flex-col space-y-2">
           <p><strong>Email Address</strong> {{ user.value.name }}</p>
-          <button
-            @click="toggleProfileModal"
-            class="mt-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 mx-16"
-          >
-            Close
-          </button>
         </div>
       </div>
       <button
@@ -51,6 +45,7 @@
           type="search"
           placeholder="Search our products"
           class="py-2 px-2 w-[40rem] h-14 text-black text-xl"
+          maxlength="50"
         />
       </div>
     </div>
