@@ -37,12 +37,6 @@
       class="bg-white rounded-[2.5rem] shadow-2xl relative max-w-7xl w-full h-1/2 mx-auto p-12 flex flex-col justify-center"
       @click.stop
     >
-      <button
-        class="absolute top-0 right-0 mt-3 mr-6 text-5xl leading-none font-semibold text-red-600"
-        @click="toggleModal"
-      >
-        &times;
-      </button>
       <div class="flex flex-col lg:flex-row items-center lg:items-start h-full">
         <div class="lg:w-1/2 lg:pr-8">
           <img
@@ -53,7 +47,9 @@
           />
         </div>
         <div class="mt-8 lg:mt-0 lg:w-1/2 flex flex-col justify-center h-full">
-          <p class="text-6xl font-bold mb-7 text-sky-800 break-words ml-[-0.5rem]">
+          <p
+            class="text-6xl font-bold mb-7 text-sky-800 break-words ml-[-0.5rem]"
+          >
             {{ product.name }}
           </p>
           <p class="text-xl mb-6 break-words">{{ product.description }}</p>
