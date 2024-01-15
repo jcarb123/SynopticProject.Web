@@ -1,9 +1,22 @@
-# Nuxt 3 Minimal Starter
+# ThreeAmigos E-Commerce Web Application
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This e-commerce web application is a dynamic, user-friendly platform designed for the online retail of products. Developed as a part of the Cloud Computing & DevOps module assessment, it showcases the integration of cloud services and DevOps practices.
 
-## Setup
 
+# Features
+- Product Browsing: Users can browse through a list of products with ease.
+- Search Functionality: A search bar is provided to find products quickly.
+- User Authentication: Secure login and logout capabilities.
+- Shopping Cart: Users can add products to their cart and proceed to checkout.
+
+
+# Built With
+- Frontend: Vue.js
+- Cloud Services: Azure Static Web app
+- CI/CD: GitHub Actions Workflow
+
+
+# Local Setup
 Make sure to install the dependencies:
 
 ```bash
@@ -20,9 +33,7 @@ yarn install
 bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the server on `http://localhost:3000`:
 
 ```bash
 # npm
@@ -37,39 +48,3 @@ yarn dev
 # bun
 bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
