@@ -34,8 +34,9 @@
     @click="toggleModal"
   >
     <div
-      class="bg-white rounded-[2.5rem] shadow-2xl relative max-w-7xl w-full h-1/2 mx-auto p-12 flex flex-col justify-center"
+      class="bg-white rounded-[2.5rem] shadow-2xl relative max-w-7xl w-full h-1/2 mx-auto p-8 flex flex-col justify-center"
       @click.stop
+      style="box-shadow: inset 0 0 0 6px rgb(253, 183, 27)"
     >
       <div class="flex flex-col lg:flex-row items-center lg:items-start h-full">
         <div class="lg:w-1/2 lg:pr-8">
@@ -43,7 +44,7 @@
             :src="product.imageUrl"
             :alt="product.name"
             class="rounded-3xl w-full lg:max-w-full"
-            style="height: auto; max-height: 80vh"
+            style="height: auto; max-height: 450px"
           />
         </div>
         <div class="mt-8 lg:mt-0 lg:w-1/2 flex flex-col justify-center h-full">
@@ -60,20 +61,36 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useAuth0 } from "@auth0/auth0-vue";
+import { incrementBasketCount } from "../event/eventBus.js";
+import { authoriseAddToBasket } from "../services/orderService";
 
-const { product, isAuthenticated } = defineProps([
-  "product",
-  "isAuthenticated",
-]);
+const config = useRuntimeConfig().public;
+
+const { product } = defineProps(["product"]);
+
+const auth0 = process.client ? useAuth0() : undefined;
+
+const isAuthenticated = computed(() => {
+  return auth0?.isAuthenticated.value;
+});
 
 const showModal = ref(false);
+const canAddToBasket = ref(false);
 
 const toggleModal = () => {
   showModal.value = !showModal.value;
 };
 
-const addToCart = () => {
-  // Add to cart logic
+const addToCart = async () => {
+  if (isAuthenticated.value) {
+    const token = await auth0.getAccessTokenSilently();
+    canAddToBasket.value = await authoriseAddToBasket(config, token);
+
+    if (canAddToBasket.value) {
+      incrementBasketCount();
+    }
+  }
 };
 </script>

@@ -4,6 +4,14 @@ import Hero from "../components/Hero.vue";
 import { nextTick } from "vue";
 
 describe("Hero", () => {
+  globalThis.useRuntimeConfig = () => {
+    return {
+      public: {
+        something: "value",
+      },
+    };
+  };
+
   it("renders correctly", () => {
     const wrapper = mount(Hero, {
       global: {
