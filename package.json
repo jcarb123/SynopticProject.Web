@@ -1,5 +1,5 @@
 {
-  "name": "thamco-web-app",
+  "name": "syn-proj-web-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,17 +12,24 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtjs/tailwindcss": "^6.12.0",
+    "@types/howler": "^2.2.11",
     "@vue/test-utils": "^2.4.3",
+    "cypress": "^13.11.0",
     "jsdom": "^23.2.0",
-    "nuxt": "^3.8.0",
-    "vue": "^3.3.6",
-    "vue-router": "^4.2.5"
+    "nuxt": "^3.11.2",
+    "vue": "^3.3.6"
   },
   "dependencies": {
     "@auth0/auth0-vue": "^2.3.2",
     "@fortawesome/fontawesome-free": "^6.5.0",
+    "@rive-app/webgl": "^2.17.2",
+    "apexcharts": "^3.49.1",
     "axios": "^1.6.5",
-    "vitest": "^1.1.3"
+    "chart.js": "^4.4.3",
+    "howler": "^2.2.4",
+    "vitest": "^1.1.3",
+    "vue-chartjs": "^5.3.1",
+    "vue-toggles": "^2.1.0"
   }
 }
